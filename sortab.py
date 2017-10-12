@@ -27,10 +27,23 @@ def sort_ab(a, b):
     """
 
     # initialize results list
+    results = []
 
-    # compare first items of each ls, append lower # to results + rm from original
-    # when one lst empty, append the remaining nums from other lst to results
-    # return results
+    while len(a) > 0 or len(b) > 0:
+
+        # if either lst empty
+        if a == []:
+            results.append(b.pop(0))
+        elif b == []:
+            results.append(a.pop(0))
+
+        # compare 1st items in both lst. append lower # to results + rm from original
+        elif a[0] < b[0]:
+            results.append(a.pop(0))
+        else:
+            results.append(b.pop(0))
+
+    return results
 
 
 if __name__ == '__main__':
