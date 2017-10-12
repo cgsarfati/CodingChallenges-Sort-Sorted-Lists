@@ -26,6 +26,12 @@ def sort_ab(a, b):
     You may not use sorted() or .sort().
     """
 
+    # initialize results list
+
+    # compare first items of each ls, append lower # to results + rm from original
+    # when one lst empty, append the remaining nums from other lst to results
+    # return results
+
 
 if __name__ == '__main__':
     import doctest
